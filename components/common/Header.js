@@ -24,15 +24,15 @@ const transitionStyles = {
 
 const mobileMenuLinks = [
   {
-    name: 'Home',
+    name: 'Inicio',
     link: '/'
   },
   {
-    name: 'Shop',
+    name: 'Tienda',
     link: '/collection'
   },
   {
-    name: 'About',
+    name: 'Sobre nosotros',
     link: '/about'
   }
 ];
@@ -115,7 +115,7 @@ class Header extends Component {
   }
 
   /**
-   * Toggle add to cart animation to true
+   * Animaciones para la tienda
    */
   toggleAddToCartAnimation() {
     const { playAddToCartAnimation } = this.state;
@@ -132,7 +132,7 @@ class Header extends Component {
       this.toggleAddToCartAnimation();
     }, 3000)
   }
-
+//metodos para revisar el inicio de sesion del cliente
   renderLoginLogout() {
     const { customer } = this.props;
     const { loggedIn } = this.state;
@@ -147,7 +147,7 @@ class Header extends Component {
           ) }
           <Link href="/account">
             <a className="font-color-black mx-2">
-              My account
+              Mi cuenta
             </a>
           </Link>
           <button
@@ -155,7 +155,7 @@ class Header extends Component {
             type="button"
             onClick={this.handleLogout}
           >
-            Logout
+            Cerrar Sesion
           </button>
         </div>
       );
@@ -164,7 +164,7 @@ class Header extends Component {
     return (
       <Link href="/login">
         <a className="font-color-black login">
-          Login
+          Iniciar Sesion
         </a>
       </Link>
     );
