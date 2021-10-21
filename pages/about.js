@@ -6,7 +6,7 @@ import Footer from '../components/common/Footer';
 const About = () => (
   <Root>
     <Head>
-      <title>About | commerce</title>
+      <title>Acerca de | Tronicshops</title>
     </Head>
     <div className="about-container">
       {/* Row */}
@@ -14,19 +14,14 @@ const About = () => (
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
             <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5 justify-content-center">
               <h2 className="font-size-header mb-4">
-                Commerce.js Demo Store
+                Tronicshops
               </h2>
               <h4 className="font-size-subheader mb-4">
-                This is an open source storefront built using Chec’s headless architecture and the Commerce.js SDK. Commerce.js is a smarter, more efficient way to build eCommerce projects, and we hope you can see that as you explore the world custom eCommerce. Please build on top of, or pick apart this project for your own use. Everything in this project, from the storefront, to the cart, checkout and receipt, is 100% customizable. To build more custom eCommerce projects, using any frontend framework or platform, head over to <a href="https://commercejs.com/" target="_blank" className="cjs-link" rel="noopener noreferrer">commercejs.com</a>.
+                Esta es una tienda virtual de demostracion para el proyecto final de la materia tendencias actuales de programacion de la carrera desarrollo de software del instituto del Azuay
+                Esta construida en su mayoria usando Javascript y como gestion de apis Commerce.js SDK. Commerce.js donde se almacena en una base de datos no relacional como mongodb, esta es una libreria javascript orientada al comercio electronico Todo en este proyecto, desde la tienda, el carrito, el pago, la factura, fue desarrollado de 0 siguiendo las buenas practicas de programacion y diseño de interfaces. 
+                Todos los derechos reservados.
               </h4>
-              <div className="about-cjs mt-3 d-flex flex-row">
-                <a className="px-4 py-3 font-color-white about-doc" href="https://commercejs.com/docs/" target="_blank" rel="noopener noreferrer">
-                  Documentation
-                </a>
-                <a className="px-4 py-3 about-dev" href="https://commercejs.com/docs/community/" target="_blank" rel="noopener noreferrer">
-                  Guides from the community
-                </a>
-              </div>
+              
             </div>
           </div>
 
@@ -52,87 +47,27 @@ const About = () => (
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
             <h3 className="font-size-header mb-4">
-              Deploy to Netlify
+              Como hosting y usamos netlify
             </h3>
             <h4 className="font-size-subheader mb-4">
-              If you would like to deploy this project live today, click the button below and watch the magic happen!
+              Netlify es una solucion efectiva y gratuita si necesitamos poner a produccion proyectos antes de comprar un dominio
             </h4>
             <div className="mt-3">
               <a
                 className="px-4 py-3 flex-grow-1 font-color-white about-net"
-                href="https://app.netlify.com/start/deploy?repository=https://github.com/chec/commercejs-nextjs-demo-store"
+                href="https://netlify.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Deploy to Netlify
+                Abrir Netlify
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </div>  
 
-      {/* Row 3 */}
-      <div className="row">
-        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
-          <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Clone in GitHub
-            </h3>
-            <h4 className="font-size-subheader mb-4">
-            If you would like to clone this project and do a manual setup, go to the repository below!
-            </h4>
-            <div className="mt-3">
-              <a
-                className="px-4 py-3 flex-grow-1 font-color-white about-gb"
-                href="https://github.com/chec/commercejs-nextjs-demo-store"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Clone in GitHub
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div className="col-12 col-lg-6">
-          <div className="about-image h-100">
-            <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/github-illustration.svg" alt="GitHub illustration"/>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 4 */}
-      <div className="row">
-        <div className="col-12 col-lg-6">
-          <div className="about-image h-100">
-            <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/blog-illustration.svg" alt="Commerce.js blog illustration"/>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
-          <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Technical Blog
-            </h3>
-            <h4 className="font-size-subheader mb-4">
-              Read the full technical tutorial here if you want to get into the nitty gritty!
-            </h4>
-            <div className="mt-3">
-              <a
-                className="px-5 py-3 flex-grow-1 font-color-white about-blog"
-                href="https://www.netlify.com/blog/2020/07/09/create-a-fully-fledged-jamstack-commerce-store-with-commerce.js-and-netlify/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read Blog
-              </a>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
     <Footer />
