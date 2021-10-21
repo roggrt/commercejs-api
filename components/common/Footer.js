@@ -6,55 +6,37 @@ const Footer = () => (
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-4">
-            Commerce.js
+            Correos
           </p>
           <div className="d-flex font-color-medium mb-5 pb-3 pb-md-0 mb-md-0">
             <div className="pr-5">
               <a
-                href="https://commercejs.com/docs/"
+                href="gmail.com"
                 className="mb-3 d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Documentation
+                roger.rojas.est@tecazuay.edu.ec
               </a>
               <a
-                href="https://commercejs.com/features"
+                href="https://gmail.com"
                 className="d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Features
+                isaias.rodriguez.est@tecazuay.edu.ec
               </a>
-            </div>
-            <div>
-              <a
-                href="https://commercejs.com/about"
-                className="mb-3 d-block font-color-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                About
-              </a>
-              <a
-                href="http://slack.commercejs.com/"
-                className="d-block font-color-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Community
-              </a>
-            </div>
+            </div>           
           </div>
         </div>
         <div className="col-12 col-sm-6 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-4">
-            Follow us
+            Siguenos
           </p>
           <div className="d-flex font-color-medium mb-5 pb-3 pb-md-0 mb-md-0">
             <div className="pr-5">
               <a
-                href="https://twitter.com/commercejs"
+                href="https://twitter.com/roggertzy"
                 className="mb-3 d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,7 +44,7 @@ const Footer = () => (
                 Twitter
               </a>
               <a
-                href="https://www.instagram.com/commerce.js/"
+                href="https://www.instagram.com/roggertzy/"
                 className="d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,17 +52,9 @@ const Footer = () => (
                 Instagram
               </a>
             </div>
-            <div>
+            <div>              
               <a
-                href="https://angel.co/company/chec"
-                className="mb-3 d-block font-color-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Angel
-              </a>
-              <a
-                href="https://www.linkedin.com/company/chec-chec-commerce-inc.-/"
+                href="https://www.linkedin.com/roggrt/"
                 className="d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -90,19 +64,8 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-4">
-          <p className="font-family-secondary font-size-display1 mb-3">
-            Newsletter
-          </p>
-          <div className="position-relative">
-            <input
-              className="borderbottom border-color-gray400 h-48 w-100 px-3"
-              placeholder="email address"
-            />
-            <button className="bg-transparent position-absolute right-0 top-50 translateY--50 pr-2 h-48">
-              <img src="/icon/arrow-long-right.svg" className="w-24" alt="Arrow icon"/>
-            </button>
-          </div>
+        <div className="col-12 col-md-4">          
+         
         </div>
       </div>
     </div>
@@ -111,30 +74,30 @@ const Footer = () => (
         <div className="custom-container d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div className="pt-5 pb-0 pt-md-4 pb-md-4 d-flex align-items-center flex-wrap justify-content-center">
             <a
-              href="https://app.netlify.com/start/deploy?repository=https://github.com/chec/commercejs-nextjs-demo-store"
+              href="https://github.com"
               className="font-color-brand font-size-caption text-uppercase text-center"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Deploy to Netlify
+              Todos los derechos reservados
             </a>
             <p className="px-2 font-color-brand font-size-caption">-</p>
             <a
-              href="https://github.com/chec/commercejs-nextjs-demo-store"
+              href="https://github.com/roggrt"
               className="font-color-brand font-size-caption text-uppercase text-center"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Clone in GitHub
+              Siguenos en GitHub
             </a>
             <p className="px-2 font-color-brand font-size-caption">-</p>
             <a
-              href="https://github.com/chec/commercejs-nextjs-demo-store"
+              href="https://github.com"
               className="font-color-brand font-size-caption text-uppercase text-center"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contribute
+              made with ♥ 
             </a>
           </div>
           <div className="font-color-brand font-size-caption py-4 text-right">
@@ -144,7 +107,7 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              &copy; { new Date().getFullYear() } Chec/Commerce.js.
+              &copy; { new Date().getFullYear() } tronicshops/ecommerce.
             </a>
           </div>
         </div>
