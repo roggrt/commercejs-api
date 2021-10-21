@@ -22,8 +22,7 @@ export default function SingleOrderPage() {
   ]);
 
   /**
-   * Verify the user is logged in, if not send them back to home. Only runs when in the
-   * browser.
+   * Verificacion de que el usuario este conectado, solo sirve en el navegador
    */
   const verifyAuth = () => {
     if (typeof window !== 'undefined' && !commerce.customer.isLoggedIn()) {
@@ -53,7 +52,7 @@ export default function SingleOrderPage() {
   }, [id, customer]);
 
   /**
-   * Create order date if available
+   * Creacion de la fecha si esta disponible
    */
   const OrderDate = ({ date: data }) => {
     if (!data) {
@@ -66,7 +65,7 @@ export default function SingleOrderPage() {
       return null
     }
     return (
-      <small><strong>Ordered placed on:</strong> { moment(date).format('MMM Do Y') }</small>
+      <small><strong>Orden hecha el:</strong> { moment(date).format('MMM Do Y') }</small>
     )
   };
 
@@ -93,7 +92,7 @@ export default function SingleOrderPage() {
 
     return (
       <div>
-        <h5>Billing address</h5>
+        <h5>Direccion de envio</h5>
         <div className="card p-2 mb-4">
           <div>
             <div><strong>{ data.name }</strong></div>
@@ -135,35 +134,35 @@ export default function SingleOrderPage() {
    * Render loading state
    */
   if (customerLoading) {
-    return <TemplatePage page={  { message: 'Loading...' }  } />
+    return <TemplatePage page={  { message: 'Cargando...' }  } />
   }
 
   /**
-   * Render logged out message if no customer is available
+   * Render logged out message si el comprador no esta disponible
    */
   if (!customer) {
     return <LoggedOut />;
   }
 
   /**
-   * Render a page if an error occurred
+   * Render a page si paso un error
    */
   if (error) {
-    return <TemplatePage page={ {message: 'Sorry something went wrong.'} } />
+    return <TemplatePage page={ {message: 'Algo salio mal.'} } />
   }
 
   /**
    * Render loading state
    */
   if (loading) {
-    return <TemplatePage page={ {message: 'Loading'} } />
+    return <TemplatePage page={ {message: 'Cargando'} } />
   }
 
   /**
    * Render a page if no order found
    */
   if (!data) {
-    return <TemplatePage page={ {message: 'Sorry we cannot find an order with that number, if you think this is in error please contact us!'} } />
+    return <TemplatePage page={ {message: 'No pudimos encontrar esa orden, si crees que es un error contactanos!'} } />
   }
 
   /**
@@ -195,22 +194,22 @@ export default function SingleOrderPage() {
             <div className="row mt-5 pt-5">
               <div className="col-12">
                 <h2 className="font-size-header mb-4 pt-5 text-center">
-                  Order: #{ data.customer_reference }
+                  Orden: #{ data.customer_reference }
                 </h2>
               </div>
             </div>
             <div className="row mt-5 pt-5">
               <div className="col-12 col-md-8 col-lg-8">
                 <div className="d-flex flex-row justify-content-between">
-                  <h5>Items</h5>
+                  <h5>Productos</h5>
                   <OrderDate date={data.created}/>
                 </div>
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th>Product</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
                       <th>Total</th>
                     </tr>
                   </thead>
@@ -240,7 +239,7 @@ export default function SingleOrderPage() {
                     </tr>
                     <tr>
                       <td colSpan="3" className="border-right-0">
-                        Shipping
+                        Envio
                       </td>
                       <td className="border-left-0 text-right">
                         { data.order.shipping.price.formatted_with_symbol}
@@ -248,7 +247,7 @@ export default function SingleOrderPage() {
                     </tr>
                     <tr>
                       <td colSpan="3" className="border-right-0">
-                        Tax
+                        Impuesto
                       </td>
                       <td className="border-left-0 text-right">
                         { data.order.tax.amount.formatted_with_symbol}
