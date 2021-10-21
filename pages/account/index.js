@@ -56,7 +56,7 @@ class CustomerAccountPage extends Component {
       return null;
     }
     return (
-      <small><strong>Customer since:</strong> { this.formatDate(this.props.customer.created) }</small>
+      <small><strong>Cliente desde:</strong> { this.formatDate(this.props.customer.created) }</small>
     );
   }
 
@@ -75,7 +75,7 @@ class CustomerAccountPage extends Component {
         this.setState({
           isError: true,
           message: [
-            'Opps, looks like an error occurred!'
+            'Opps, parece que hubo un error!'
           ],
         });
       });
@@ -87,61 +87,61 @@ class CustomerAccountPage extends Component {
   getFulfillmentStatus(status) {
     if (!status) {
       return (
-        <span className="badge badge-secondary">Processing</span>
+        <span className="badge badge-secondary">Procesando</span>
       );
     }
     if (status === 'fulfilled') {
       return (
-        <span className="badge badge-primary">Fullfilled</span>
+        <span className="badge badge-primary">Completado</span>
       );
     }
 
     if (status === 'not_fulfilled') {
       return (
-        <span className="badge badge-secondary">Processing</span>
+        <span className="badge badge-secondary">Procesando</span>
       );
     }
 
     return (
-      <span className="badge badge-secondary">Processing</span>
+      <span className="badge badge-secondary">Procesando</span>
     );
   }
 
   /**
-   * Get the payment status
+   * Obtencion del estado de pago
    */
   getPaymentStatus(status) {
     if (!status) {
       return (
-        <span className="badge badge-secondary">Pending</span>
+        <span className="badge badge-secondary">Pendiente</span>
       );
     }
 
     if (status === 'not-paid') {
       return (
-        <span className="badge badge-warning">Not paid</span>
+        <span className="badge badge-warning">No pagado</span>
       );
     }
 
     if (status === 'paid') {
       return (
-        <span className="badge badge-success">Paid</span>
+        <span className="badge badge-success">Pagado</span>
       );
     }
 
     if (status === 'refunded') {
       return (
-        <span className="badge badge-danger">Refunded</span>
+        <span className="badge badge-danger">Reembolsado</span>
       );
     }
 
     return (
-      <span className="badge badge-secondary">Pending</span>
+      <span className="badge badge-secondary">Pendiente</span>
     );
   }
 
   /**
-   * Get the customer's shipping address
+   * La direccion de envio del cliente
    */
   renderShippingAddress() {
     const { orders } = this.state;
@@ -149,7 +149,7 @@ class CustomerAccountPage extends Component {
     if (!orders || !orders.length) {
       return (
         <div>
-          You havent placed an order yet!
+          No has realizado una orden aun!
         </div>
       );
     }
@@ -177,7 +177,7 @@ class CustomerAccountPage extends Component {
     if (!orders || !orders.length) {
       return (
         <div className="card text-center p-2">
-          <p>You haven&apos;t placed any orders yet!</p>
+          <p>No has ubicado una orden aun!</p>
         </div>
       );
     }
@@ -186,11 +186,11 @@ class CustomerAccountPage extends Component {
       <table className="table table-bordered">
       <thead>
         <tr>
-          <th>Order</th>
-          <th>Payment</th>
-          <th>Fulfillment</th>
+          <th>Orden</th>
+          <th>Pago</th>
+          <th>Completacion</th>
           <th>Total</th>
-          <th>Actions</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -231,7 +231,7 @@ class CustomerAccountPage extends Component {
       return null;
     }
 
-    // Generate alert message as either list or single line.
+    // alertaaa
     const alertMessage = message.length === 1
       ? message[0]
       : (
@@ -269,14 +269,14 @@ class CustomerAccountPage extends Component {
     return (
       <Root>
         <Head>
-          <title>Account</title>
+          <title>Cuenta</title>
         </Head>
         <div className="account-container">
           <div className="custom-container py-5 my-4 my-sm-5">
             <div className="row mt-4">
               <div className="col-12">
                 <h2 className="font-size-header mb-4 pt-5 text-center">
-                  My account
+                  Mi cuenta
                 </h2>
                 { this.renderAlert() }
               </div>
@@ -284,7 +284,7 @@ class CustomerAccountPage extends Component {
             <div className="row mt-5 pt-5">
               <div className="col-12 col-md-8 col-lg-8">
                 <div className="d-flex flex-row justify-content-between">
-                  <h5>Order history</h5>
+                  <h5>Historial de ordenes</h5>
                   { this.customerSince() }
                 </div>
                 { this.renderOrdersTable() }
@@ -303,7 +303,7 @@ class CustomerAccountPage extends Component {
                     { email }
                   </a>
                   <h6>
-                    Shipping address
+                    Direccion de envio
                   </h6>
                   { this.renderShippingAddress() }
                 </div>
