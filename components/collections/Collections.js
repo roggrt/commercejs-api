@@ -91,7 +91,7 @@ class Collections extends Component {
   }
 
   /**
-   * Render collections based on categories available in data
+   * Renderizamos colecciones en base a los datos guardados
    */
   renderCollection() {
     const { categories } = this.props;
@@ -128,7 +128,7 @@ class Collections extends Component {
     return (
       <div className="py-5 my-5">
         <Head>
-          <title>Collections</title>
+          <title>Colecciones</title>
         </Head>
         <div className="py-4">
           {/* Sidebar */}
