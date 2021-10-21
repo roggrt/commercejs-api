@@ -1,7 +1,6 @@
-<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>Layer 1</title>
-  <text transform="matrix(1.60522 0 0 1.51429 -139.805 -132.686)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Andada Pro'" font-size="30" id="svg_1" y="131.47169" x="128.2101" stroke-width="0" fill="#000000">Tronicshop</text>
-  <text transform="rotate(-0.536267 329.236 50.7095) matrix(1.5604 0 0 2.16752 -199.968 -55.4997)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Bitter'" font-size="30" id="svg_2" y="59.05947" x="331.97895" stroke-width="0" fill="#444444">s</text>
+  <text transform="matrix(4.7359 0 0 4.08898 -509.465 -393.463)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Andada Pro'" font-size="30" id="svg_1" y="144.92247" x="113.76627" stroke-width="0" fill="#000000">Tronicshop</text>
  </g>
 </svg>
