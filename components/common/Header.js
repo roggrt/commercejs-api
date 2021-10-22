@@ -124,7 +124,7 @@ class Header extends Component {
   }
 
   /**
-   * Call toggle of add to cart animation and set time out to false
+   * Llamar toggle la animacion y duracion de la animacion del carrito
    */
   handleAddToCartToggle() {
     this.toggleAddToCartAnimation();
@@ -142,7 +142,7 @@ class Header extends Component {
         <div className="d-flex align-items-center">
           { customer && customer.firstname && (
             <span className="mr-2 font-weight-regular">
-              Hi, { customer.firstname }!
+              Hola, { customer.firstname }!
             </span>
           ) }
           <Link href="/account">
@@ -185,10 +185,10 @@ class Header extends Component {
         >
           <div className="d-none d-sm-flex">
             <Link href="/collection">
-              <a className="mr-4 font-color-black">Shop</a>
+              <a className="mr-4 font-color-black">Tienda</a>
             </Link>
             <Link href="/about">
-              <a className="font-color-black">About</a>
+              <a className="font-color-black">Acerca de</a>
             </Link>
           </div>
           <div className="logo-container">
@@ -201,7 +201,7 @@ class Header extends Component {
             <Link href="/">
               <a>
                 <img
-                  src="/images/commerce.svg"
+                  src="https://cdn-icons.flaticon.com/png/512/2954/premium/2954820.png?token=exp=1634890998~hmac=0ec784c6c3cca9b0e4185ee66900caaa"
                   className="logo cursor-pointer"
                   alt="Logo"
                 />
