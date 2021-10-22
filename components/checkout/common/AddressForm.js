@@ -21,14 +21,14 @@ export default class AddressForm extends Component {
   componentDidUpdate(prevProps, prevState) {
     const hasDeliveryCountryChanged = prevProps.country !== this.props.country;
 
-    // refresh list of regions when delivery country has changed
+    // cargar las regiones disponibles
     if (hasDeliveryCountryChanged) {
       this.getRegions(this.props.country);
     }
   }
 
   /**
-   * Fetch available shipping regions for the chosen country
+   * Filtrar los paises disponibles para la compra
    *
    * @param {string} country
    */
@@ -60,7 +60,7 @@ export default class AddressForm extends Component {
           <div className="col-12 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                Full name*
+                Nombre completo*
               </p>
               <input required name={`${type}[name]`} autoComplete="name" value={name} className="rounded-0 w-100" />
             </label>
@@ -70,12 +70,12 @@ export default class AddressForm extends Component {
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                Country*
+                Pais*
               </p>
               <Dropdown
                 required
                 name={`${type}[country]`}
-                placeholder="Select a country"
+                placeholder="Seleccione un pais"
                 value={country}
               >
                 {
@@ -90,7 +90,7 @@ export default class AddressForm extends Component {
           </div>
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
-              <p className="mb-1 font-size-caption font-color-light">City*</p>
+              <p className="mb-1 font-size-caption font-color-light">Ciudad*</p>
               <input required name={`${type}[town_city]`} autoComplete="address-level2" value={townCity} className="rounded-0 w-100" />
             </label>
           </div>
@@ -99,7 +99,7 @@ export default class AddressForm extends Component {
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                Address line 1*
+                Direccion principal*
               </p>
               <input
                 required
@@ -107,20 +107,20 @@ export default class AddressForm extends Component {
                 name={`${type}[street]`}
                 value={street}
                 className="rounded-0 w-100"
-                placeholder="House number, steet address, etc."
+                placeholder="Calles, numero de casa."
               />
             </label>
           </div>
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                Address line 2 (optional)
+                Referencia (optional)
               </p>
               <input
                 name={`${type}[street_2]`}
                 value={street2}
                 className="rounded-0 w-100"
-                placeholder="Apartment, suite number, etc."
+                placeholder="referencias, descripcion etc."
               />
             </label>
           </div>
@@ -129,13 +129,13 @@ export default class AddressForm extends Component {
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                State/province/region*
+                Estado/Provincia/Region*
               </p>
               <Dropdown
                 required
                 name={`${type}[region]`}
                 value={region}
-                placeholder="Select a region"
+                placeholder="Seleccionar una region"
               >
                 {
                   Object.entries(this.state.subdivisions).map(([code, name]) => (
@@ -150,7 +150,7 @@ export default class AddressForm extends Component {
           <div className="col-12 col-sm-6 mb-3">
             <label className="w-100">
               <p className="mb-1 font-size-caption font-color-light">
-                Postal code/zip code*
+                Codigo Postal*
               </p>
               <input
                 required
