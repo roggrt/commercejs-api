@@ -5,34 +5,34 @@ import Modal from '../common/atoms/Modal';
 const reviews = [
   {
     stars: '5',
-    title: 'Perfect',
-    description: 'Great fit and feel. They elevate lounging to the next level!',
-    reviewBy: 'Heidi C.',
-    date: 'December, 2019'
+    title: 'Perfecto',
+    description: 'Desde que compre este producto mi vida ha mejorado notablemente!',
+    reviewBy: 'Raul Trelles.',
+    date: 'Diciembre, 2022'
   },
   {
     stars: '3.5',
-    title: 'So comfortable!',
+    title: 'Es comodo!',
     description:
-      'I sized up just in case and kind of wished I hadn’t. Very comfortable and I live in them exclusively during the weekend.',
-    reviewBy: 'Heidi C.',
-    date: 'December, 2019'
+      'Le puse esa calificacion porque pense que me lo darian gratis.',
+    reviewBy: 'Rodrigo Rodriguez',
+    date: 'Enero, 2020'
   },
   {
     stars: '4',
-    title: 'Comfy but thin',
+    title: 'En la foto se veia pequeño',
     description:
-      'Comfortable but kinda thin for a pant. I typically wear a 32/33 pant and had to size up to XL for these to not fit like a legging. Have been wearing pretty solid for a month of so and there\'s some pilling, but not a lot. Good price for OK product.',
-    reviewBy: 'Heidi C.',
-    date: 'December, 2019'
+      'No es la primera vez que compro. Buen precio por un producto basico.',
+    reviewBy: 'El Vecino.',
+    date: 'Diciembre, 2020'
   },
   {
     stars: '5',
-    title: 'So comfortable!',
+    title: 'Me encanto!',
     description:
-      'I sized up just in case and kind of wished I hadn’t. Very comfortable and I live in them exclusively during the weekend.',
-    reviewBy: 'Heidi C.',
-    date: 'December, 2019'
+      'Hace tiempo habia terminado con mi novia asi que decidi comprarle este regalo para volver con ella y le encanto, quedo eternamente agradecido con ustedes, creo que me casare con ella.',
+    reviewBy: 'Paul Paulino.',
+    date: 'Agosto, 2020'
   }
 ];
 
@@ -74,7 +74,7 @@ export default class ClientReview extends Component {
         >
           <div className="d-flex justify-content-between align-items-center pb-3">
             <p className="font-size-subheader font-weight-medium">
-              All reviews
+              Todas las reseñas
             </p>
             <img
               tabIndex="0"
@@ -90,7 +90,7 @@ export default class ClientReview extends Component {
           <div className="col-12 col-lg-10 offset-lg-1">
             <div className="d-flex justify-content-between flex-column flex-sm-row align-items-sm-center mb-3">
               <p className="font-size-title font-weight-medium mb-2 mb-sm-0">
-                4.3 stars from 10 reviews
+                4.3 stars de 10 reseñas
               </p>
             </div>
             <ReviewList reviews={reviews}>
@@ -99,7 +99,7 @@ export default class ClientReview extends Component {
                 onClick={this.handleOpen}
                 className="text-center bg-transparent w-100 h-72 px-3 text-decoration-underline"
               >
-                View all reviews
+                Ver todas las reseñas
               </button>
             </ReviewList>
           </div>
