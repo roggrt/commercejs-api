@@ -541,7 +541,7 @@ class CheckoutPage extends Component {
     return (
       <Root>
         <Head>
-          <title>Checkout</title>
+          <title>Caja</title>
         </Head>
 
         <div className="custom-container py-5 my-4 my-sm-5">
@@ -552,12 +552,12 @@ class CheckoutPage extends Component {
               <div className="d-flex pb-4 breadcrumb-container">
                 <Link href="/collection">
                   <a className="font-color-dark font-size-caption text-decoration-underline cursor-pointer">
-                    Cart
+                    Carrito
                   </a>
                 </Link>
                 <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
-                  Checkout
+                  Pago
                 </div>
               </div>
               {
@@ -565,13 +565,13 @@ class CheckoutPage extends Component {
                 && (
                   <form onChange={this.handleChangeForm} onSubmit={this.captureOrder}>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Customer
+                      Cliente
                     </p>
                     <div className="row">
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            First name*
+                            Nombre*
                           </p>
                           <input required name="customer[first_name]" autoComplete="given-name" value={this.state['customer[first_name]']} className="rounded-0 w-100" />
                         </label>
@@ -579,7 +579,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Last name*
+                            Apellido*
                           </p>
                           <input required name="customer[last_name]" autoComplete="family-name" value={this.state['customer[last_name]']} className="rounded-0 w-100" />
                         </label>
@@ -589,7 +589,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Telephone
+                            Telefono
                           </p>
                           <input
                             name="customer[phone]"
@@ -602,7 +602,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Email address*
+                            Correo electronico*
                           </p>
                           <input
                             required
@@ -615,7 +615,7 @@ class CheckoutPage extends Component {
                       </div>
                     </div>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Shipping Address
+                      Direccion de envio
                     </p>
                     <div className="mb-5">
                       <AddressForm
@@ -633,7 +633,7 @@ class CheckoutPage extends Component {
                         <div className="col-12 mb-3">
                           <label className="w-100">
                             <p className="mb-1 font-size-caption font-color-light">
-                              Shipping method*
+                              Metodo de envio*
                             </p>
                             <Dropdown
                               name="fulfillment[shipping_method]"
@@ -642,7 +642,7 @@ class CheckoutPage extends Component {
                                 ? (`${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_code}`)
                                 : ''
                               }
-                              placeholder="Select a shipping method"
+                              placeholder="Elige un metodo de envio"
                             >
                               {
                                 shippingOptions && shippingOptions.map(option => (
@@ -665,14 +665,13 @@ class CheckoutPage extends Component {
                           className="mr-3"
                         />
                         <p>
-                          Receive our news, restocking, good plans and news in your mailbox!
-                          Rest assured, you will not be flooded, we only send one newsletter
-                          per month approximately 🙂
+                          Recibe noticias, productos nuevos, promociones y descuentos en tu correo!
+                          No te llenaremos de spam, solo buenas noticias 😯🙂
                         </p>
                       </div>
                       <label className="w-100 mb-3">
                         <p className="mb-1 font-size-caption font-color-light">
-                          Order notes (optional)
+                          Notas (opcional)
                         </p>
                         <textarea name="orderNotes" value={this.state.orderNotes} className="rounded-0 w-100" />
                       </label>
@@ -683,7 +682,7 @@ class CheckoutPage extends Component {
                     {/* Billing Address */}
                     { checkout.collects && checkout.collects.billing_address && <>
                       <p className="font-size-subheader font-weight-semibold mb-3">
-                        Billing Address
+                        Facturacion
                       </p>
                       <div className="border border-color-gray400 mb-5">
                         {billingOptions.map((value, index) => (
@@ -718,14 +717,14 @@ class CheckoutPage extends Component {
                     </>}
 
                     <p className="checkout-error">
-                      { !selectedShippingOption ? 'Select a shipping option!' : '' }
+                      { !selectedShippingOption ? 'Elije una opcion de envio!' : '' }
                     </p>
                     <button
                       type="submit"
                       className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                       disabled={!selectedShippingOption}
                     >
-                      Make payment
+                      Realizar pago
                     </button>
                   </form>
                 )
@@ -735,7 +734,7 @@ class CheckoutPage extends Component {
             <div className="col-12 col-lg-5 col-md-10 offset-md-1 mt-4 mt-lg-0">
               <div className="bg-brand200 p-lg-5 p-3 checkout-summary">
                 <div className="borderbottom font-size-subheader border-color-gray400 pb-2 font-weight-medium">
-                  Your order
+                  Tu orden
                 </div>
                 <div className="pt-3 borderbottom border-color-gray400">
                   {(checkout.live ? checkout.live.line_items : []).map((item, index, items) => {
@@ -774,7 +773,7 @@ class CheckoutPage extends Component {
                     name="discountCode"
                     onChange={this.handleChangeForm}
                     value={this.state.discountCode}
-                    placeholder="Gift card or discount code"
+                    placeholder="Tarjeta de regalo o codigo de descuento"
                     className="mr-2 col"
                   />
                   <button
@@ -782,7 +781,7 @@ class CheckoutPage extends Component {
                     disabled={!this.props.checkout || undefined}
                     onClick={this.handleDiscountChange}
                   >
-                    Apply
+                    Aplicar
                   </button>
                 </div>
                 <div className="py-3 borderbottom border-color-black">
@@ -792,15 +791,15 @@ class CheckoutPage extends Component {
                       amount: checkout.live ? checkout.live.subtotal.formatted_with_symbol : '',
                     },
                     {
-                      name: 'Tax',
+                      name: 'Impuesto',
                       amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
                     },
                     {
-                      name: 'Shipping',
+                      name: 'Envio',
                       amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'No shipping method selected',
                     },
                     {
-                      name: 'Discount',
+                      name: 'Descuento',
                       amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'No discount code applied',
                     }
                   ].map((item, i) => (
@@ -814,7 +813,7 @@ class CheckoutPage extends Component {
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-2 pt-3">
                   <p className="font-size-title font-weight-semibold">
-                    Total amount
+                    Total a pagar
                   </p>
                   <p className="text-right font-weight-semibold font-size-title">
                     $ { checkout.live ? checkout.live.total.formatted_with_code : '' }
