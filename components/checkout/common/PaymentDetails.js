@@ -34,7 +34,7 @@ export default class PaymentDetails extends Component {
             checked={selectedGateway === 'test_gateway'}
             className="mr-3"
           />
-          <p className="font-weight-medium">Credit/debit card</p>
+          <p className="font-weight-medium">Tarjeta de credito/debito</p>
         </label>
 
         { selectedGateway === 'test_gateway' && (
@@ -43,7 +43,7 @@ export default class PaymentDetails extends Component {
               <div className="col-sm-8">
                 <label className="w-100 mb-3 mt-2 mb-sm-0">
                   <p className="mb-1 font-size-caption font-color-light">
-                    Card Number
+                    Numero de tarjeta
                   </p>
                   <input
                     name="cardNumber"
@@ -71,7 +71,7 @@ export default class PaymentDetails extends Component {
               <div className="col-sm-3">
                 <label className="w-100 mb-3 mt-2 mb-sm-0">
                   <p className="mb-1 font-size-caption font-color-light">
-                    Exp. Month
+                    Mes exp.
                   </p>
                   <input
                     name="expMonth"
@@ -85,7 +85,7 @@ export default class PaymentDetails extends Component {
               <div className="col-sm-3">
                 <label className="w-100 mb-3 mt-2 mb-sm-0">
                   <p className="mb-1 font-size-caption font-color-light">
-                    Exp. Year
+                    Año exp.
                   </p>
                   <input
                     type="number"
@@ -104,7 +104,7 @@ export default class PaymentDetails extends Component {
   }
 
   /**
-   * Renders a Stripe Elements form for capturing payment information using Stripe as the gateway
+   * Renders stripe elementos por si se usa stripe
    *
    * @returns {JSX.Element}
    */
