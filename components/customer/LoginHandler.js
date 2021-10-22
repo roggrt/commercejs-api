@@ -40,20 +40,20 @@ class LoginHandler extends Component {
 
     commerce.customer.getToken(token)
       .then(() => {
-        // Fetch customer details
+        // Busqueda de los detalles del cliente
         return setCustomer().then(() => Router.push('/account'));
       })
       .catch(() => {
         this.setState({
           loading: false,
           isError: true,
-          message: ['The login link has expired. Please try again.'],
+          message: ['El link de inicio de sesion ha expirado. Porfavor intente de nuevo.'],
         });
       });
   }
 
   /**
-   * Change handler for the email address field
+   *Cambiar el email 
    */
   handleChangeEmail(event) {
     this.setState({
@@ -62,8 +62,8 @@ class LoginHandler extends Component {
   }
 
   /**
-   * Perform a request to Commerce.js to log the user in by their email address. If the
-   * user's email address exists, a login link will be emailed to them.
+   * Realizar peticion a la api de  Commerce.js para iniciar sesion con el correo del cleinte. Si el 
+   * correo del usuario existe, un login link se le enviara.
    *
    * @see https://commercejs.com/docs/api/#issue-and-send-login-token
    * @param {Event} e
@@ -88,7 +88,7 @@ class LoginHandler extends Component {
           isError: false,
           email: '',
           message: [
-            'If that email address exists in our system, we\'ve just sent you a link to continue logging in!'
+            'Si es un correo valido, enviaremos un link de inicio de sesion para que accedas :D!'
           ]
         });
       })
@@ -135,7 +135,7 @@ class LoginHandler extends Component {
       <form>
         <label className="w-100 mb-4">
           <p className="mb-1 font-size-caption font-color-light text-left">
-            Email address
+            Correo electronico
           </p>
           <input
             name="email"
@@ -151,7 +151,7 @@ class LoginHandler extends Component {
           type="submit"
           onClick={this.loginCustomer}
         >
-          Get magic link
+          Obtener link 
         </button>
       </form>
     );
